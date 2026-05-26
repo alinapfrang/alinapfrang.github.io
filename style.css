@@ -1,0 +1,342 @@
+/* ============================================
+   Alina Pfrang — Personal Website
+   Typography: Lora (serif) + DM Sans (sans-serif)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --text-primary: #1a1a1a;
+  --text-secondary: #5a5a5a;
+  --text-tertiary: #8a8a8a;
+  --border: rgba(0, 0, 0, 0.12);
+  --border-strong: rgba(0, 0, 0, 0.25);
+  --bg: #fdfcfa;
+  --bg-soft: #f5f3ee;
+  --accent: #8a5a3b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-name {
+  font-family: 'Lora', serif;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.15s;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-links a:hover { color: var(--text-primary); }
+.nav-links a.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Typography ---------- */
+h1 {
+  font-family: 'Lora', serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+  letter-spacing: -0.005em;
+}
+
+h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+p {
+  margin-bottom: 1.1rem;
+  font-size: 15.5px;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color 0.15s;
+}
+
+a:hover { text-decoration-color: var(--accent); }
+
+/* ---------- Home page hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.position {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.position span { display: block; }
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.interests {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--bg-soft);
+}
+
+.interests strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.link-pill {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  padding: 6px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.15s;
+  background: transparent;
+}
+
+.link-pill:hover {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  background: var(--bg-soft);
+}
+
+/* ---------- Photo column ---------- */
+.photo-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.photo-frame {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-mini {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.contact-mini a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.contact-mini a:hover { color: var(--text-primary); }
+
+/* ---------- Research / Teaching lists ---------- */
+.paper {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.paper:last-child {
+  border-bottom: none;
+}
+
+.paper-title {
+  font-family: 'Lora', serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+}
+
+.paper-meta {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.paper-status {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  background: var(--bg-soft);
+  border-radius: 3px;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.paper-status.published {
+  background: #e8efe6;
+  color: #4a6240;
+}
+
+.section-intro {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+ul.simple-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.simple-list li {
+  font-size: 14.5px;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+ul.simple-list li:last-child { border-bottom: none; }
+
+ul.simple-list .item-meta {
+  display: block;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-tertiary);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .container {
+    padding: 1.5rem 1.25rem 3rem;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .photo-col {
+    order: -1;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 28px; }
+  h2 { font-size: 20px; }
+  nav {
+    margin-bottom: 2rem;
+  }
+  .nav-links {
+    gap: 1.25rem;
+  }
+}
