@@ -306,6 +306,28 @@ ul.simple-list .item-meta {
   margin-top: 2px;
 }
 
+/* ---------- CV page ---------- */
+.cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.cv-viewer {
+  display: block;
+  width: 100%;
+  height: 85vh;
+  min-height: 600px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-soft);
+}
+
+.cv-fallback { padding: 1.5rem; }
+
+.cv-mobile-note { display: none; }
+
 /* ---------- Footer ---------- */
 footer {
   margin-top: 4rem;
@@ -339,4 +361,6 @@ footer {
   .nav-links {
     gap: 1.25rem;
   }
+  .cv-viewer { display: none; }
+  .cv-mobile-note { display: block; }
 }
